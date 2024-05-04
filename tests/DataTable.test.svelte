@@ -10,15 +10,14 @@
     Button,
     Link,
   } from "../types";
-  import type { DataTableHeader } from "../types/DataTable/DataTable.svelte";
   import Launch from "carbon-icons-svelte/lib/Launch.svelte";
 
-  const headers: DataTableHeader[] = [
+  const headers = [
     { key: "name", value: "Name" },
     { key: "protocol", value: "Protocol", width: "400px", minWidth: "40%" },
     { key: "port", value: "Port" },
     { key: "rule", value: "Rule", sort: false },
-  ];
+  ] as const;
   const rows = [
     {
       id: "a",
